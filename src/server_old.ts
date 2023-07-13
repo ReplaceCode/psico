@@ -29,20 +29,20 @@ import { v4 as uuidv4} from 'uuid';
 	  return response.status(201).send();
 	});
 
-	// app.get("/statement/:cpf", (request, response)=> {
+	app.get("/statement/:cpf", (request, response)=> {
 
-	// 	const { cpf } = request.params;
+		const { cpf } = request.params;
 
-	// 	const customer = customers.find((customer) => customer.cpf === cpf);
+		const customer = customers.find((customer) => customer.cpf === cpf);
 		
-	// 	if(!customer){
-	// 		response.status(400).json({
-	// 			error:"Customer already not exists"
-	// 		})
-	// 	}
-	// 	console.log(customer);
-	// 	 //const statement = customer.statement
-	// 	return response.json();
-	// })
+		if(!customer){
+			response.status(400).json({
+				error:"Customer already not exists"
+			})
+		}
+		console.log(customer);
+		 //const statement = customer.statement
+		return response.json();
+	})
 	
 app.listen(3333)
