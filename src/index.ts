@@ -35,4 +35,4 @@ import { v4 as uuidv4} from 'uuid';
 		return response.send(customers);
 	})
 	
-app.listen(3333)
+app.listen(3000)
