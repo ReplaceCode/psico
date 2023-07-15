@@ -7,5 +7,5 @@ const express_1 = __importDefault(require("express"));
 const users_routes_1 = require("./routes/users.routes");
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
-app.use(users_routes_1.usersRoutes);
+app.use("/user", users_routes_1.usersRoutes);
 app.listen(3000, () => console.log("Server is running! "));
